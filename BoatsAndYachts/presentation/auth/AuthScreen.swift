@@ -17,12 +17,10 @@ struct AuthScreen: View {
                 TextField("Email", text: $viewModel.email)
                 
                 Button("Зарегистрироваться") {
-                    viewModel.register()
+                    self.viewModel.register()
                 }
                 .disabled(viewModel.name.isEmpty || viewModel.email.isEmpty)
             }
-            .padding()
-            .navigationTitle("Регистрация")
         }
     }
 }

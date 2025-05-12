@@ -12,24 +12,29 @@ struct ProfileScreen: View {
     
     var body: some View {
         NavigationView {
-            Group {
-                if let user = viewModel.user {
-                    VStack(spacing: 20) {
-                        Text("Имя: \(user.name)")
-                        Text("Email: \(user.email)")
-                        Text("Бонусы: \(user.bonuses)")
-                        
-                        Button("Выйти") {
-                            viewModel.logout()
-                        }
-                    }
-                    .padding()
+            VStack {
+                if viewModel.user != nil {
+                    userInfoView()
                 } else {
                     Text("Пользователь не найден")
-                        .padding()
                 }
             }
-            .navigationTitle("Профиль")
+        }
+    }
+    
+    @ViewBuilder
+    private func userInfoView() -> some View {
+        if let user = viewModel.user {
+            VStack(spacing: 20) {
+                Text("Имя: \(user.name)")
+                Text("Email: \(user.email)")
+                Text("Бонусы: \(user.bonuses)")
+                
+                Button("Выйти") {
+                    viewModel.logout()
+                }
+            }
+            .padding()
         }
     }
 }

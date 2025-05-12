@@ -16,13 +16,12 @@ struct HomeScreen: View {
                 VStack(spacing: 20) {
                     ForEach(viewModel.promotions) { promotion in
                         PromotionCard(promotion: promotion) {
-                            viewModel.addBonuses(amount: promotion.bonusAmount)
+                            self.viewModel.addBonuses(amount: promotion.bonusAmount)
                         }
                     }
                 }
                 .padding()
             }
-            .navigationTitle("Акции")
         }
     }
 }
