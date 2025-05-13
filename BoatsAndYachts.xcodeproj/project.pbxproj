@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F979F2A2DD2B7BB00A2EEC7 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F979F292DD2B7BB00A2EEC7 /* LoginScreen.swift */; };
+		4F979F2C2DD2B7C500A2EEC7 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F979F2B2DD2B7C500A2EEC7 /* RegisterScreen.swift */; };
 		4FB30AFA2DCFC13900636D3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB30AF92DCFC13900636D3B /* AppDelegate.swift */; };
 		4FB30AFC2DCFC13900636D3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB30AFB2DCFC13900636D3B /* SceneDelegate.swift */; };
 		4FB30AFE2DCFC13900636D3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB30AFD2DCFC13900636D3B /* ContentView.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F979F292DD2B7BB00A2EEC7 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		4F979F2B2DD2B7C500A2EEC7 /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		4FB30AF62DCFC13900636D3B /* BoatsAndYachts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoatsAndYachts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB30AF92DCFC13900636D3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FB30AFB2DCFC13900636D3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 		4FB30B3D2DCFF05200636D3B /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				4F979F2B2DD2B7C500A2EEC7 /* RegisterScreen.swift */,
+				4F979F292DD2B7BB00A2EEC7 /* LoginScreen.swift */,
 				4FB30B402DCFF93800636D3B /* AuthScreen.swift */,
 				4FB30B422DCFF95600636D3B /* AuthViewModel.swift */,
 			);
@@ -376,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F979F2C2DD2B7C500A2EEC7 /* RegisterScreen.swift in Sources */,
 				4FB30B382DCFF01900636D3B /* PromotionRepository.swift in Sources */,
 				4FB30B472DCFF9D000636D3B /* HomeViewModel.swift in Sources */,
 				4FB30B3C2DCFF04700636D3B /* Promotion.swift in Sources */,
@@ -387,6 +394,7 @@
 				4FB30B492DCFF9E000636D3B /* ProfileScreen.swift in Sources */,
 				4FB30B362DCFF00500636D3B /* UserRepository.swift in Sources */,
 				4FB30B4B2DCFF9ED00636D3B /* ProfileViewModel.swift in Sources */,
+				4F979F2A2DD2B7BB00A2EEC7 /* LoginScreen.swift in Sources */,
 				4FB30AFE2DCFC13900636D3B /* ContentView.swift in Sources */,
 				4FB30B432DCFF95600636D3B /* AuthViewModel.swift in Sources */,
 			);

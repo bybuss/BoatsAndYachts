@@ -12,14 +12,16 @@ struct AuthScreen: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                TextField("Имя", text: $viewModel.name)
-                TextField("Email", text: $viewModel.email)
-                
-                Button("Зарегистрироваться") {
-                    self.viewModel.register()
+            VStack {
+                NavigationLink(destination: LoginScreen(viewModel: viewModel)) {
+                    Text("Вход")
+                        .padding()
                 }
-                .disabled(viewModel.name.isEmpty || viewModel.email.isEmpty)
+                
+                NavigationLink(destination: RegisterScreen(viewModel: viewModel)) {
+                    Text("Регистрация")
+                        .padding()
+                }
             }
         }
     }

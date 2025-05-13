@@ -10,9 +10,19 @@ import Foundation
 class UserRepository {
     static let shared = UserRepository()
     private let usersFileName = "users.json"
+    private let currentUserKey = "currentUser"
 
     func getCurrentUser() -> User? {
-        return loadUsers().first
+        if let data = UserDefaults.standard.data(forKey: currentUserKey) {
+            return try? JSONDecoder().decode(User.self, from: data)
+        }
+        return nil
+    }
+
+    func saveCurrentUser(_ user: User) {
+        if let data = try? JSONEncoder().encode(user) {
+            UserDefaults.standard.set(data, forKey: currentUserKey)
+        }
     }
     
     func loadUsers() -> [User] {
